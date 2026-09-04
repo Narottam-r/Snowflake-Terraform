@@ -1,0 +1,10 @@
+# Ignore local credential override files
+*.secret.tfvars
+secret.tfvars
+.env
+
+# Ignore standard terraform local caches
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
