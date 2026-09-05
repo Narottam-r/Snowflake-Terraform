@@ -28,6 +28,10 @@ provider "snowflake" {
   authenticator     = "SNOWFLAKE_JWT"
   private_key       = var.snowflake_private_key
   role              = "SYSADMIN"
+  # Enable the preview feature
+  preview_features_enabled = [
+    "snowflake_storage_integration_resource"
+  ]
 }
 
 provider "azurerm" {
