@@ -21,9 +21,9 @@ variable "warehouses" {
     max_cluster_count = number
     min_cluster_count = number
     scaling_policy    = string
-    GENERATION =  string
+    generation	      =  string
     enable_query_acceleration = bool
-  INITIALLY_SUSPENDED = bool
+    initially_suspended = bool
   }))
 }
 
@@ -36,7 +36,7 @@ resource "snowflake_warehouse" "wh" {
   max_cluster_count  = each.value.max_cluster_count
   min_cluster_count  = each.value.min_cluster_count
   scaling_policy     = each.value.scaling_policy
-  GENERATION         = each.value.GENERATION
+  generation         = each.value.generation
   enable_query_acceleration = each.value.enable_query_acceleration
   initially_suspended = true
 }

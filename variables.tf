@@ -50,5 +50,8 @@ variable "warehouses" {
     max_cluster_count = number
     min_cluster_count = number
     scaling_policy    = string
+    generation        =  string
+    enable_query_acceleration = bool
+    initially_suspended = bool
   }))
 }

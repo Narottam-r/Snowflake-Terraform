@@ -4,7 +4,7 @@ environment = "DEV"
 
 # Target Provider Accounts
 snowflake_organization_name = "GBLBNOL"
-snowflake_account_name      = "ST88491.snowflakecomputing.com"
+snowflake_account_name      = "ST88491"
 snowflake_user              = "TF_SERVICE_USER"
 # Note: Keep your actual key protected or load via an environment variable TF_VAR_snowflake_private_key
 
@@ -28,21 +28,21 @@ warehouses = {
     max_cluster_count = 1
     min_cluster_count = 1
     scaling_policy    = "STANDARD"
-    GENERATION        =        "1"
+    generation        = "1"
     enable_query_acceleration = false
-    INITIALLY_SUSPENDED = TRUE
+    initially_suspended = true
 
   }
   analytics = {
     size              = "SMALL"
-    auto_suspend      = 120
+    auto_suspend      = 60
     auto_resume       = true
     max_cluster_count = 3
     min_cluster_count = 1
     scaling_policy    = "STANDARD"
-    GENERATION        =        "1"
+    generation        = "1"
     enable_query_acceleration = false
-    INITIALLY_SUSPENDED = TRUE
+    initially_suspended = true
 
   }
 }
