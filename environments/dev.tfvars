@@ -7,10 +7,6 @@ snowflake_organization_name = "GBLBNOL"
 snowflake_account_name      = "ST88491.snowflakecomputing.com"
 snowflake_user              = "TF_SERVICE_USER"
 # Note: Keep your actual key protected or load via an environment variable TF_VAR_snowflake_private_key
-snowflake_private_key       = "-----BEGIN ENCRYPTED PRIVATE KEY-----\nMII...\n-----END ENCRYPTED PRIVATE KEY-----"
-
-azure_subscription_id = "00000000-0000-0000-0000-000000000000"
-azure_tenant_id       = "00000000-0000-0000-0000-000000000000"
 
 storage_allowed_locations = [
   "azure://sttargetdatalake.blob.core.windows.net/raw/",

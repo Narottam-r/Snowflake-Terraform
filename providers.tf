@@ -4,8 +4,8 @@ terraform {
 
   required_providers {
     snowflake = {
-      source  = "Snowflake-Labs/snowflake"
-      version = "~> 1.0"
+	source  = "snowflakedb/snowflake"
+      	version = "2.20.0"
     }
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -14,9 +14,9 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "rg-terraform-state"
-    storage_account_name = "stterraformstate"
-    container_name       = "tfstate"
+    resource_group_name  = "snowflake_dev"
+    storage_account_name = "snowflakegtrdevadls2"
+    container_name       = "gtrdevcontainer"
     key                  = "snowflake/terraform.tfstate"
   }
 }

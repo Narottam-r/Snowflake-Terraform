@@ -1,4 +1,14 @@
 # modules/warehouses/main.tf
+# Inside each child module's configuration file
+terraform {
+  required_providers {
+    snowflake = {
+      source  = "snowflakedb/snowflake"
+      version = ">= 2.20.0" # Match or allow your root module version
+    }
+  }
+}
+
 variable "environment" {
   type = string
 }
@@ -12,7 +22,7 @@ variable "warehouses" {
     min_cluster_count = number
     scaling_policy    = string
     GENERATION =  string
-  enable_query_acceleration = bool
+    enable_query_acceleration = bool
   INITIALLY_SUSPENDED = bool
   }))
 }
